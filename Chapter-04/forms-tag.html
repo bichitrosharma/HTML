@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Login Forms</title>
+
+    <style>
+        /* General body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    
+        /* Form container */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            display: none; /* Initially hidden */
+        }
+
+        form.active {
+            display: block; /* Show form when active */
+        }
+    
+        /* Form element styles */
+        div {
+            margin-bottom: 15px;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+    
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    
+        textarea {
+            resize: vertical;
+        }
+    
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Toggle link for switching between forms */
+        .toggle-link {
+            text-align: center;
+            margin-top: 10px;
+            color: #4CAF50;
+            cursor: pointer;
+        }
+
+        .toggle-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Sign Up Form -->
+    <form id="signupForm" class="active">
+        <h1>Sign Up</h1>
+        <!-- Text input for Name -->
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter Name" required>
+        </div>
+
+        <!-- Phone input -->
+        <div>
+            <label for="ph">Phone</label>
+            <input id="ph" type="tel" placeholder="Enter Phone" required>
+        </div>
+
+        <!-- Email input -->
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter Email" required>
+        </div>
+
+        <!-- Password input -->
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter Password" required>
+        </div>
+
+        <!-- Date input -->
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input id="dob" type="date" required>
+        </div>
+
+        <!-- Dropdown (select input) for Gender -->
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Checkbox for agreeing to terms -->
+        <div>
+            <input id="terms" type="checkbox" required>
+            <label for="terms">I agree to the terms and conditions</label>
+        </div>
+
+        <!-- Textarea for Comments -->
+        <div>
+            <label for="comments">Comments</label>
+            <textarea id="comments" placeholder="Enter your comments" rows="4"></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <div>
+            <button type="submit">Sign Up</button>
+        </div>
+
+        <!-- Link to toggle to Login form -->
+        <div class="toggle-link" onclick="showLogin()">Already have an account? Log In</div>
+    </form>
+
+    <!-- Login Form -->
+    <form id="loginForm">
+        <h1>Log In</h1>
+
+        <!-- Email input -->
+        <div>
+            <label for="login_email">Email</label>
+            <input id="login_email" type="email" placeholder="Enter Email" required>
+        </div>
+
+        <!-- Password input -->
+        <div>
+            <label for="login_password">Password</label>
+            <input id="login_password" type="password" placeholder="Enter Password" required>
+        </div>
+
+        <!-- Submit button -->
+        <div>
+            <button type="submit">Log In</button>
+        </div>
+
+        <!-- Link to toggle to Sign Up form -->
+        <div class="toggle-link" onclick="showSignup()">Don't have an account? Sign Up</div>
+    </form>
+
+    <script>
+        // JavaScript to toggle between Sign Up and Login forms
+        function showSignup() {
+            document.getElementById('signupForm').classList.add('active');
+            document.getElementById('loginForm').classList.remove('active');
+        }
+
+        function showLogin() {
+            document.getElementById('loginForm').classList.add('active');
+            document.getElementById('signupForm').classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>

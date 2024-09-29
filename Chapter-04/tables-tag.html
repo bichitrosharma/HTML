@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Tables</title>
+
+    <style>
+        /* Style for the entire table */
+        table {
+            width: 100%;
+            /* Full width of the container */
+            border-collapse: collapse;
+            /* Merges table borders */
+            margin: 20px 0;
+            /* Adds space above and below the table */
+        }
+
+        /* Style for table headers */
+        th {
+            background-color: #4CAF50;
+            /* Green background for header */
+            color: white;
+            /* White text for header */
+            padding: 10px;
+            /* Padding inside header cells */
+            text-align: left;
+            /* Aligns text to the left */
+        }
+
+        /* Style for table cells */
+        td {
+            border: 1px solid #dddddd;
+            /* Light gray border for cells */
+            padding: 10px;
+            /* Padding inside cells */
+            text-align: left;
+            /* Aligns text to the left */
+        }
+
+        /* Alternate row colors for better readability */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+            /* Light gray background for even rows */
+        }
+
+        /* Style for the table when hovered */
+        table:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Shadow effect on hover */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Tables in HTML</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th> <!-- Column for employee names -->
+                <th>Role</th> <!-- Column for job roles -->
+                <th>Salary</th> <!-- Column for employee salaries -->
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!-- Row 1 -->
+            <tr>
+                <td>Bichitro</td> <!-- Employee name -->
+                <td>Software Developer</td> <!-- Job role -->
+                <td>$130,000</td> <!-- Salary -->
+            </tr>
+
+            <!-- Row 2 -->
+            <tr>
+                <td>Mahadi Hasan</td> <!-- Employee name -->
+                <td>Chartered Accountant</td> <!-- Job role -->
+                <td>$108,547</td> <!-- Salary -->
+            </tr>
+
+            <!-- Row 3 -->
+            <tr>
+                <td>Mufidul Alom</td> <!-- Employee name -->
+                <td>Marketing Manager</td> <!-- Job role -->
+                <td>$100,000</td> <!-- Salary -->
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
